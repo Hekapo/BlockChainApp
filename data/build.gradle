@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -34,15 +35,16 @@ android {
 dependencies {
     implementation project(path: ':domain')
 
-    //Retrofit OkHttp
+    //Retrofit
     def retrofit_version = "2.9.0"
-    def okHttp_version = "5.0.0-alpha.2"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-    implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.3"
-    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3"
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.4.0-rc01"
+    kapt "androidx.room:room-compiler:2.4.0-rc01"
+    implementation "androidx.room:room-ktx:2.4.0-rc01"
+
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.0")
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
 }

@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -52,6 +55,12 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "com.squareup.okhttp3:okhttp:5.0.0-alpha.3"
     implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3"
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.4.0-rc01"
+    kapt "androidx.room:room-compiler:2.4.0-rc01"
+    implementation "androidx.room:room-ktx:2.4.0-rc01"
+    androidTestImplementation "androidx.room:room-testing:2.4.0-rc01"
 
     // Glide
     implementation 'com.github.bumptech.glide:okhttp3-integration:4.12.0'
