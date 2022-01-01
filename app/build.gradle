@@ -35,12 +35,16 @@ android {
     buildFeatures{
         viewBinding true
     }
+    configurations {
+        all*.exclude module: 'bcprov-jdk15on'
+    }
 }
 
 dependencies {
 
     implementation project(path: ':domain')
     implementation project(path: ':data')
+    implementation project(path: ':algorithms')
 
     // Navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'

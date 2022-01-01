@@ -8,4 +8,13 @@ data class BlockModelItem(
     val ts: String
 ) {
     constructor() : this(Data("", ""), "", "", "", "")
+
+    override fun toString(): String {
+        return "{" +
+                "\"prevhash\":\"" + prevhash + "\"," +
+                "\"data\":" + data.toString() + "," +
+                "\"signature\":\"" + signature + "\"," +
+                "\"ts\":\"" + ts + "\"," +
+                "\"publickey\":\"" + publickey + "\"}"
+    }
 }

@@ -4,8 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidProjects/BlockChainApp/app/src/main/res/layout/activity_main.xml" value="0.259375" />
-        <entry key="..\:/AndroidProjects/BlockChainApp/app/src/main/res/layout/fragment_home.xml" value="0.1046875" />
-        <entry key="..\:/AndroidProjects/BlockChainApp/app/src/main/res/layout/one_block.xml" value="0.13385416666666666" />
+        <entry key="..\:/AndroidProjects/BlockChainApp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/BlockChainApp/app/src/main/res/layout/one_block.xml" value="0.264" />
       </map>
     </option>
   </component>

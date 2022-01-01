@@ -1,7 +1,7 @@
 package com.example.blockchainapp.di
 
-import com.example.blockchainapp.data.database.BlockModelDAO
-import com.example.blockchainapp.data.database.DataDAO
+import com.example.blockchainapp.data.database.dao.BlockModelDAO
+import com.example.blockchainapp.data.database.dao.DataDAO
 import com.example.blockchainapp.data.network.BlockChainService
 import com.example.blockchainapp.data.repository.BlockChainRepositoryIml
 import com.example.blockchainapp.domain.repository.BlockChainRepository

@@ -1,9 +1,8 @@
-package com.example.blockchainapp.data.database
+package com.example.blockchainapp.data.database.entities
 
 import androidx.room.*
 
 @Entity(
-
     tableName = "block_info",
     foreignKeys = [
         ForeignKey(

@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.blockchainapp.R
+import com.example.blockchainapp.algorithms.SaveKeys
 import com.example.blockchainapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,9 +25,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        val saveKeys = SaveKeys(this)
+        saveKeys.saveKeys()
 
         setupActionBarWithNavController(navController)
-
 
     }
 

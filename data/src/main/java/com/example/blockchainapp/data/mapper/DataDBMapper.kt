@@ -1,6 +1,6 @@
 package com.example.blockchainapp.data.mapper
 
-import com.example.blockchainapp.data.database.DataDB
+import com.example.blockchainapp.data.database.entities.DataDB
 import com.example.blockchainapp.domain.models.BlockModelItem
 import com.example.blockchainapp.domain.models.Data
 

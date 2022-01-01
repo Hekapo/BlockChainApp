@@ -41,6 +41,7 @@ class HomeFragment : Fragment(), BlockChainAdapter.OnBlockClicked {
                     Toast.makeText(context, "Loading", Toast.LENGTH_SHORT).show()
                 }
                 Status.SUCCESS -> {
+                    it.data?.let { it1 -> vm.insert(it1) }
 
                     it.data?.let { it1 -> setData(it1) }
                     Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
@@ -51,6 +52,12 @@ class HomeFragment : Fragment(), BlockChainAdapter.OnBlockClicked {
                 }
             }
         }.launchWhenStarted(lifecycleScope)
+
+        binding.sendBlock.setOnClickListener {
+            val data = binding.dataEt.text.toString()
+            val name = binding.nameEt.text.toString()
+            vm.sendBlock(data, name)
+        }
 
 
         return binding.root

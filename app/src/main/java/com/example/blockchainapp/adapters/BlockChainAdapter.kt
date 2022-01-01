@@ -13,7 +13,6 @@ class BlockChainAdapter(context: Context, onBlockClicked: OnBlockClicked) :
     ListAdapter<BlockModelItem, BlockChainAdapter.BlockChainHolder>(
         object : DiffUtil.ItemCallback<BlockModelItem>() {
 
-
             override fun areItemsTheSame(
                 oldItem: BlockModelItem,
                 newItem: BlockModelItem
@@ -70,7 +69,6 @@ class BlockChainAdapter(context: Context, onBlockClicked: OnBlockClicked) :
     override fun onBindViewHolder(holder: BlockChainHolder, position: Int) {
         with(holder) {
             binding.data.text = getItem(position).data.data
-            binding.prevHash.text = getItem(position).prevhash as CharSequence?
             binding.name.text = getItem(position).data.name
         }
     }

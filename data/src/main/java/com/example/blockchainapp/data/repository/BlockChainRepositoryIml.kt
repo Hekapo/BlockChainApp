@@ -1,11 +1,13 @@
 package com.example.blockchainapp.data.repository
 
-import com.example.blockchainapp.data.database.BlockModelDAO
-import com.example.blockchainapp.data.database.DataDAO
+import com.example.blockchainapp.data.database.dao.BlockModelDAO
+import com.example.blockchainapp.data.database.dao.DataDAO
 import com.example.blockchainapp.data.mapper.BlockModelDBMapper
 import com.example.blockchainapp.data.mapper.DataDBMapper
 import com.example.blockchainapp.data.network.BlockChainService
 import com.example.blockchainapp.domain.models.BlockModelItem
+import com.example.blockchainapp.domain.models.Data
+import com.example.blockchainapp.domain.models.NewBlockResponse
 import com.example.blockchainapp.domain.repository.BlockChainRepository
 
 class BlockChainRepositoryIml(
@@ -21,6 +23,17 @@ class BlockChainRepositoryIml(
 
         blockModelDAO.insertBlock(BlockModelDBMapper.transformToEntity(item, id))
 
-
     }
+
+    override suspend fun sendBlock(
+        newBlockResponse: String
+//        data: Data,
+//        prevHash: String,
+//        publicKey: String,
+//        signature: String,
+//        ts: String
+    ) {
+        blockChainService.sendBlock(newBlockResponse)
+    }
+
 }

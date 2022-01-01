@@ -10,3 +10,4 @@ rootProject.name = "BlockChainApp"
 include ':app'
 include ':domain'
 include ':data'
+include ':algorithms'
